@@ -18,7 +18,7 @@ gDocTabsClodedsIDs = [];
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
 
 	// We check that it's a URL of a Google document, and that we have not already processed this event
-    if (tab.url.startsWith("https://docs.google.com/document") && !gDocWindowsIDs.includes(tab.windowId) && !gDocTabsClodedsIDs.includes(tab.id))
+    if (tab.url.startsWith("https://docs.google.com/presentation") && !gDocWindowsIDs.includes(tab.windowId) && !gDocTabsClodedsIDs.includes(tab.id))
     {
 		// The "source" tab is an unprocessed Google document...
 		
